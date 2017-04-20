@@ -1,0 +1,85 @@
+﻿<form name="TestieApp" novalidate ng-submit="controller.add()">
+    <div>
+        <label>
+            First Name:
+            <input name="fname" ng-model="controller.fname" type="text" required />
+            <span ng-show="TestieApp.fname.$touched && TestieApp.fname.$error.required" class="error">
+                First Name is required.
+            </span>
+        </label>
+    </div>
+    <div>
+        <label>
+            Last Name:
+            <input name="lname" ng-model="controller.lname" type="text" required />
+            <span ng-show="TestieApp.lname.$touched && TestieApp.lname.$error.required" class="error">
+                Last Name is required.
+            </span>
+        </label>
+    </div>
+    <div>
+        <label>
+            Age:
+            <input name="age" ng-model="controller.age" type="number" required />
+            <span ng-show="TestieApp.age.$touched && TestieApp.age.$error.required" class="error">
+                Age is required.
+            </span>
+        </label>
+    </div>
+    <div>
+        <label>
+            High School:
+            <input name="school" ng-model="controller.school" type="text" required />
+            <span ng-show="TestieApp.school.$touched && TestieApp.school.$error.required" class="error">
+                High School is required.
+            </span>
+        </label>
+    </div>
+    <div>
+        <label>
+            E-mail:
+            <input name="email" ng-model="controller.email" type="text" required />
+            <span ng-show="TestieApp.email.$touched && TestieApp.email.$error.required" class="error">
+                E-mail is required.
+            </span>
+        </label>
+    </div>
+    <div>
+        <label>
+            Shirt Size:
+            <select name="size" ng-model="controller.size" required>
+                <option>X Small</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+                <option>X Large</option>
+            </select>
+            <span ng-show="TestieApp.size.$touched && TestieApp.size.$error.required" class="error">
+                You have to choose a shirt size.
+            </span>
+        </label>
+
+
+        <label>
+            Position:
+            <select name="position" ng-model="controller.position" required>
+                <option>1st base</option>
+                <option>2nd base</option>
+                <option>3rd base</option>
+                <option>Short Stop</option>
+                <option>Left Field</option>
+                <option>Center Field</option>
+                <option>Right Field</option>
+                <option>Pitcher</option>
+                <option>Catcher</option>
+            </select>
+            <span ng-show="TestieApp.position.$touched && TestieApp.position.$error.required" class="error">
+                You have to choose a position.
+            </span>
+        </label>
+
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+</form>

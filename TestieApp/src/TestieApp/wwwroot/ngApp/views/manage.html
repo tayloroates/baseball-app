@@ -1,0 +1,94 @@
+﻿
+
+<form ng-submit="controller.savePlayer()">
+    <div class="form-group">
+        <label for="Team">Pick Team:</label>
+        <select name="team" ng-model="controller.player.team">
+            <option>Blue Team</option>
+            <option>Red Team</option>
+        </select>
+    </div>
+    <div>
+        <label for="first name">First Name</label>
+        <input ng-model="controller.player.firstName">
+    </div>
+    <div>
+        <label for="last name">Last Name</label>
+        <input ng-model="controller.player.lastName">
+    </div>
+    <div>
+        <label for="high school">High School</label>
+        <input ng-model="controller.player.highSchool">
+    </div>
+    <div>
+        <label for="age">Age</label>
+        <input type="number" ng-model="controller.player.age">
+    </div>
+    <div>
+        <label for="height">Height</label>
+        <input ng-model="controller.player.height">
+    </div>
+    <div>
+        <label for="weight">Weight</label>
+        <input type="number" ng-model="controller.player.weight">
+    </div>
+    <div>
+        <label for="position">Position</label>
+        <select name="position" ng-model="controller.player.position" required>
+            <option>1st base</option>
+            <option>2nd base</option>
+            <option>3rd base</option>
+            <option>Short Stop</option>
+            <option>Left Field</option>
+            <option>Center Field</option>
+            <option>Right Field</option>
+            <option>Pitcher</option>
+            <option>Catcher</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th scope="row">#</th>
+            <th scope="row">Team</th>
+            <th scope="row">First Name</th>
+            <th scope="row">Last Name</th>
+            <th scope="row">Age</th>
+            <th scope="row">High School</th>
+            <th scope="row">Position</th>
+            <th scope="row">Height</th>
+            <th scope="row">Weight</th>
+            <th scope="row"></th>
+            <th scope="row"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="p in controller.players">
+
+            <td>{{p.id}}</td>
+            <td>{{p.team}}</td>
+            <td>{{p.firstName}}</td>
+            <td>{{p.lastName}}</td>
+            <td>{{p.age}}</td>
+            <td>{{highSchool}}</td>
+            <td>{{p.position}}</td>
+            <td>{{p.height}}</td>
+            <td>{{p.weight}}</td>
+            <td><a ui-sref="edit({id: p.id})">edit</a></td>
+            <td><a ui-sref="delete({id: p.id})">delete</a></td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+

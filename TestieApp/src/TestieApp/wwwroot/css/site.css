@@ -1,0 +1,97 @@
+body {
+    padding-top: 0px;
+    padding-bottom: 100px;
+}
+
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*.carousel-caption {
+    z-index: 10 !important;
+}
+
+    .carousel-caption p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        z-index: 10 !important;
+    }
+}*/
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    padding-bottom: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    height: 52px;
+    font-size: 14px;
+    background-color: rgba(245, 14, 30, 1);
+    background: -webkit-linear-gradient(top, rgba(189, 4, 4, 1) 0%, rgba(245, 14, 30, 1) 100%);
+    background: linear-gradient(fixed, rgba(189, 4, 4, 1) 0%, rgba(245, 14, 30, 1) 100%);
+    border-width: 1px;
+    border-radius: 4px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(245, 14, 30, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(46, 41, 41, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    max-height: 15px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(46, 27, 27, 1);
+    background: -webkit-linear-gradient(top, rgba(56, 43, 43, 1) 0%, rgba(46, 27, 27, 1) 100%);
+    background: linear-gradient(fixed, rgba(56, 43, 43, 1) 0%, rgba(46, 27, 27, 1) 100%);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+
+    border-color: #2e1b1b;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+
+    background-color: #2e1b1b;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #2e1b1b;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #f50e1e;
+}
+
+/*END NAVBAR*/
+
+/*BEGINNING OF CAROUSEL*/
+
+ 
+  .carousel-inner  {
+     height: 100%;
+      width: 100%;
+      margin: auto;
+  }
+ .carousel {
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+}

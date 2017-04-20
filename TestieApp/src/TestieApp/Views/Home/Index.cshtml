@@ -1,0 +1,78 @@
+<html ng-app="TestieApp">
+<head>
+
+    <title>TestieApp</title>
+
+
+    
+    <!--DEFAULTS-->
+    <script src="~/bower_components/jquery/dist/jquery.js"></script>
+    <link href="css/full-slider.css" rel="stylesheet">
+    <script src="~/bower_components/jquery/dist/jquery.js"></script>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <base href="/" />
+</head>
+<body ng-controller="AccountController as account">
+ <!--Navbar-->
+        <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header"><a class="navbar-brand" href="/">Silver Glovez</a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-menubuilder">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact</a>
+                        </li>
+                        <li>
+                            <a href="/signup">Sign Up</a>
+                        </li>
+                        <li>
+                            <a href="/manage" ng-hide="!account.getClaim('isAdmin') && !account.isLoggedIn()">Manage</a>
+                        </li>
+                        <li>
+                            <a href="/apply" ng-show="account.isLoggedIn()">Apply</a>
+                        </li>
+                        <li>
+                            <a href="/login" ng-show="!account.isLoggedIn()">Login</a>
+                        </li>
+                        <li>
+                            <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+
+                    <ui-view></ui-view>
+                </div>
+
+            <!-- Library Files -->
+            <script src="/bower_components/angular/angular.js"></script>
+            <script src="/bower_components/angular-resource/angular-resource.js"></script>
+            <script src="/bower_components/angular-animate/angular-animate.js"></script>
+            <script src="/bower_components/angular-touch/angular-touch.js"></script>
+            <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+            <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+            <!-- App Files-->
+            <script src="/ngapp/app.js"></script>
+            <script src="/ngapp/controllers/controllers.js"></script>
+            <script src="/ngapp/services/services.js"></script>
+
+
+            <!-- Security -->
+            <script src="/ngapp/controllers/accountcontroller.js"></script>
+            <script src="/ngapp/services/accountservice.js"></script>
+
+</body>
+</html>
